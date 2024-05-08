@@ -138,7 +138,7 @@ class BasicPreprocessing:
         """
 
         # Tokenize:
-        word_tokens = self.tokenize_words(text)
+        word_tokens = self.tokenize_words(text) 
 
         english_stop_words = stopwords.words("english")
         filtered_tokens = [
