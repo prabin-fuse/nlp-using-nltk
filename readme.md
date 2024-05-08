@@ -13,9 +13,16 @@
 - Spelling Check
 - Others
 ## - Basic Preprocessing
-### Basic
-##### Tokenization
+- Tokenization
+    - Word Tokenization
+    - Sentence Tokenization
+- Stop Word Removal
+- Stemming
+- Lemmatization
 ## - Advanced Preprocessing
+- POS tagging
+- Parse Tree
+- Named Entity Recognition (NER)
 
 # Using NLTK
 - NLTK stands for Natural Language Toolkit

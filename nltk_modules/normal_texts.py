@@ -1,10 +1,14 @@
-from text_preprocessing_module import BasicCleaning, BasicPreprocessing, AdvancedPreprocessing
+from text_preprocessing_module import (
+    BasicCleaning,
+    BasicPreprocessing,
+    AdvancedPreprocessing,
+)
 
-text = '''First and foremost, detecting small objects is hard because small objects are, well, small. 
-<h1>The smaller the object</h1>, the less information the detection model has to work with. If a car is far 
-off in the distance, it might only occupy a few pixels in our image. In much the same way humans have 
-trouble making out distant objects, our model has a harder time identifying cars without visually 
-discernible features like wheels and license plates!'''
+text = """First and foremost, detecting small objects is hard because small objects are, well, small.
+<h1>The smaller the object</h1>, the less information the detection model has to work with. If a car is far
+off in the distance, it might only occupy a few pixels in our image. In much the same way humans have
+trouble making out distant objects, our model has a harder time identifying cars without visually
+discernible features like wheels and license plates!"""
 print(f"Original Text : {text}\n")
 
 # Objects instance:
@@ -41,7 +45,7 @@ lemma_tokens = basic_preprocess.lemmatization(text)
 print(f"The text after lemmatization is : {' '.join(word_tokens)}\n")
 
 # POS tagging:
-tags =  advanced_proprocess.pos_tagging(text)
+tags = advanced_proprocess.pos_tagging(text)
 print(f"The corresponding pos tags are : {tags}\n")
 
 
@@ -50,12 +54,10 @@ Albert Einstein was a German-born theoretical physicist who developed the theory
 """
 
 
-
 # Named Entity: with labels
-named_entities =  advanced_proprocess.named_entity_recognizer(text)
+named_entities = advanced_proprocess.named_entity_recognizer(text)
 print(f"The named entity with labels are : {named_entities}\n")
 
 # Named Entity without labels
-named_entities =  advanced_proprocess.named_entity_recognizer(text, True)
+named_entities = advanced_proprocess.named_entity_recognizer(text, True)
 print(f"The named entity without labels are : {named_entities}")
-
